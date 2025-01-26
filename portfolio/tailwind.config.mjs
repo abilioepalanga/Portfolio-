@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const config = {
     darkMode: ["class"],
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,7 +17,25 @@ export default {
             lg: "960px",
             xl: "1200px",
         },
+        fontFamily: {
+            primary: "var(--font-jetbrains-mono)",
+        },
         extend: {
+            keyframes: {
+                "accordion-down": {
+                    from: { height: "0" },
+                    to: { height: "var(--radix-accordion-content-height)" },
+                },
+                "accordion-up": {
+                    to: { height: "0" },
+                    from: { height: "var(--radix-accordion-content-height)" },
+                },
+            },
+            animation: {
+                "accordion-down": "accordion-down 0.2s ease-out",
+                "accordion-up": "accordion-up 0.2s ease-out",
+            },
+
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
