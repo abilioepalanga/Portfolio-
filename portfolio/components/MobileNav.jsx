@@ -46,6 +46,23 @@ const MobileNav = () => {
                     <SheetTitle>logo</SheetTitle>
                 </SheetHeader>
                 {/* logo */}
+                <div className="mt-32 mb-40 text-center text-2xl">
+                    <Link href="/">
+                        <h1 className="text-4xl font-semibold">
+                            Elvis<span className="text-cyan-600">.</span>
+                        </h1>
+                    </Link>
+                </div>
+                {/* nav */}
+                <nav>
+                    {links.map((link, index) => {
+                        return (
+                            <Link href={link.path} key={index} className="">
+                                {link.name}
+                            </Link>
+                        );
+                    })}
+                </nav>
             </SheetContent>
         </Sheet>
     );
