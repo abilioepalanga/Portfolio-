@@ -11,13 +11,16 @@ const buttonVariants = cva(
         variants: {
             variant: {
                 default:
-                    "bg-blue-800 text-white ring-accent  hover:text-primary focus:ring-2 focus:ring-accent-hover",
+                    "bg-blue-800 text-white ring-accent   hover:text-primary focus:ring-2 focus:ring-accent-hover",
+                primary:
+                    "bg-primary text-white ring-accent   hover:text-primary focus:ring-2 focus:ring-accent-hover",
+                outline:
+                    "bg-transparent text-primary ring-primary hover:bg-primary hover:text-white focus:ring-2 focus:ring-primary",
             },
             size: {
-                default: "h-10 px-4 py-2",
-                sm: "h-9 rounded-md px-3",
-                lg: "h-11 rounded-md px-8",
-                icon: "h-10 w-10",
+                default: "h-[40px] px-6 ",
+                md: "h-[48px] px-6 ",
+                lg: "h-[56px] px-8 text-sm uppercase tracking-[2px]",
             },
         },
         defaultVariants: {
