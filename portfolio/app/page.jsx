@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Download from "@/components/Download";
+import Social from "@/components/Social";
 
 const Home = () => {
     return (
@@ -30,7 +31,9 @@ const Home = () => {
                         {/* Button and Socials media*/}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
                             <Download />
-                            <div className=" mb-8 xl:m-0">Socials</div>
+                            <div className=" mb-8 xl:m-0">
+                                <Social />
+                            </div>
                         </div>
                     </div>
                     {/* Image */}
