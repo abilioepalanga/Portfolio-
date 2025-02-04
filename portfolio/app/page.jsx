@@ -30,6 +30,7 @@ const Home = () => {
                         {/* Button and Socials media*/}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
                             <Download />
+                            <div className=" mb-8 xl:m-0">Socials</div>
                         </div>
                     </div>
                     {/* Image */}
