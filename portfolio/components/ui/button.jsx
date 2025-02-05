@@ -11,7 +11,7 @@ const buttonVariants = cva(
         variants: {
             variant: {
                 default:
-                    "bg-blue-800 text-white ring-accent   hover:text-primary focus:ring-2 focus:ring-accent-hover",
+                    "bg-blue-700 text-white ring-accent   hover:text-primary focus:ring-2 focus:ring-accent-hover",
                 primary:
                     "bg-primary text-white ring-accent   hover:text-primary focus:ring-2 focus:ring-accent-hover",
                 outline:

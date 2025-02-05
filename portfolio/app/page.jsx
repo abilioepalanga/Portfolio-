@@ -16,7 +16,7 @@ const Home = () => {
                         <h1 className="h1 mb-6">
                             Hi there! I'm
                             <br />
-                            <span className="text-blue-800">
+                            <span className="text-blue-500">
                                 Abílio Elvis Epalanga
                             </span>
                         </h1>
