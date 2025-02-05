@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Download from "@/components/Download";
 import Social from "@/components/Social";
+import Photo from "@/components/Photo";
 
 const Home = () => {
     return (
@@ -12,7 +13,7 @@ const Home = () => {
                 xl:pt-8 xl:pb-24"
                 >
                     <div className="text-center xl:text-left">
-                        <span className="text-xl">Frontend Developer</span>
+                        <span className="text-xl ">Frontend Developer</span>
                         <h1 className="h1 mb-6">
                             Hi there! I'm
                             <br />
@@ -42,7 +43,9 @@ const Home = () => {
                         </div>
                     </div>
                     {/* Image */}
-                    <div>Photo</div>
+                    <div>
+                        <Photo />
+                    </div>
                 </div>
             </div>
         </section>
