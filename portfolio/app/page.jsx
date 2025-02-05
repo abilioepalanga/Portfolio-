@@ -32,7 +32,12 @@ const Home = () => {
                         <div className="flex flex-col xl:flex-row items-center gap-8">
                             <Download />
                             <div className=" mb-8 xl:m-0">
-                                <Social />
+                                <Social
+                                    containerStyles=" flex gap-6"
+                                    iconStyles="w-9 h-9 border border-blue-500 rounded-full
+                                    flex justify-center items-center text-blue-500 text-base 
+                                    hover:bg-blue-500 hover:text-white transition-all duration-500"
+                                />
                             </div>
                         </div>
                     </div>
