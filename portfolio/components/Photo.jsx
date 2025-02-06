@@ -8,14 +8,14 @@ const Photo = () => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 2, duration: 0.4, ease: "easeIn" }}
+                transition={{ delay: 0.7, duration: 0.4, ease: "easeIn" }}
             >
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{
                         opacity: 1,
                         transition: {
-                            delay: 2.4,
+                            delay: 0.5,
                             duration: 0.4,
                             ease: "easeInOut",
                         },
