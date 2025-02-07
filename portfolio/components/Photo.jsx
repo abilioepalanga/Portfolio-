@@ -24,7 +24,7 @@ const Photo = () => {
                         },
                     }}
                     className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] 
-                mix-blend-lighten "
+                mix-blend-lighten absolute"
                 >
                     <Image
                         src="/assets/Four-Invert.png"
@@ -60,6 +60,11 @@ const Photo = () => {
                                 "4 250 22 22",
                             ],
                             rotate: [120, 360],
+                        }}
+                        transition={{
+                            duration: 14,
+                            repeat: Infinity,
+                            repeatType: "reverse",
                         }}
                     />
                     <defs>
