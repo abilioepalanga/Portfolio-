@@ -4,54 +4,40 @@ import Image from "next/image";
 
 const Photo = () => {
     return (
-        <div className="w-full h-full relative">
+        <div className="w-full h-full flex justify-center items-center relative">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
                     opacity: 1,
                     transition: { delay: 0.7, duration: 0.4, ease: "easeIn" },
                 }}
+                className="relative flex justify-center items-center"
+                style={{ transform: "translate(-50px, -50px)" }} // Movido mais para cima e para a esquerda
             >
-                {/* Image */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{
-                        opacity: 1,
-                        transition: {
-                            delay: 0.5,
-                            duration: 0.4,
-                            ease: "easeInOut",
-                        },
-                    }}
-                    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] 
-                mix-blend-lighten absolute"
-                >
-                    <Image
-                        src="/assets/Four-Invert.png"
-                        priority
-                        quality={100}
-                        fill
-                        alt=""
-                        className="object-contain"
-                    />
-                </motion.div>
-                {/* End Image */}
-
                 {/* Circle */}
                 <motion.svg
-                    className="w-[300px] xl:w-[506px]  h-[300px] xl:h-[506px]"
-                    fill="transparent"
+                    className="absolute"
+                    width={500} // Aumentado de 400 para 500
+                    height={500} // Aumentado de 400 para 500
                     viewBox="0 0 506 506"
                     xmlns="http://www.w3.org/2000/svg"
+                    initial={{ scale: 1 }}
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                    }}
                 >
                     <motion.circle
                         cx="253"
                         cy="253"
                         r="250"
                         stroke="#0026ffe9"
-                        strokeWidth="4"
+                        strokeWidth="8" // Mantido o dobro da espessura
                         strokeLinecap="round"
                         strokeLinejoin="round"
+                        fill="transparent" // Garante que o fundo dentro do círculo seja transparente
                         initial={{ strokeDasharray: "24 10 0 0" }}
                         animate={{
                             strokeDasharray: [
@@ -67,21 +53,29 @@ const Photo = () => {
                             repeatType: "reverse",
                         }}
                     />
-                    <defs>
-                        <linearGradient
-                            id="paint0_linear"
-                            x1="253"
-                            y1="0"
-                            x2="253"
-                            y2="506"
-                            gradientUnits="userSpaceOnUse"
-                        >
-                            <stop stopColor="#1A202C" />
-                            <stop offset="1" stopColor="#2D3748" />
-                        </linearGradient>
-                    </defs>
                 </motion.svg>
-                {/* End Circle */}
+
+                {/* Image */}
+                <motion.div
+                    className="relative"
+                    initial={{ scale: 1 }}
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                    }}
+                >
+                    <Image
+                        src="/assets/Four-Invert.png"
+                        priority
+                        quality={100}
+                        width={400} // Aumentado de 300 para 400
+                        height={400} // Aumentado de 300 para 400
+                        alt="Profile Picture"
+                        className="rounded-full object-cover"
+                    />
+                </motion.div>
             </motion.div>
         </div>
     );
