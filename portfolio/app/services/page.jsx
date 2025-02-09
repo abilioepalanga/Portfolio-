@@ -61,7 +61,10 @@ const Services = () => {
                             >
                                 {/*Top*/}
                                 <div className="w-full flex justify-between items-center">
-                                    <div className="text-5xl front-extrabold text-outline text-transparent group-hover:text-outline-hover">
+                                    <div
+                                        className="text-5xl front-extrabold text-outline text-transparent group-hover:text-outline-hover
+                                    transition-all duration-200"
+                                    >
                                         {service.num}
                                     </div>
                                     <Link href={service.href}>
