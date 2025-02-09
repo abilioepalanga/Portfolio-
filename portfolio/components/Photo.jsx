@@ -12,13 +12,12 @@ const Photo = () => {
                     transition: { delay: 0.7, duration: 0.4, ease: "easeIn" },
                 }}
                 className="relative flex justify-center items-center"
-                style={{ transform: "translate(-50px, -50px)" }} // Movido mais para cima e para a esquerda
             >
-                {/* Circle */}
+                {/* Outer Animated Circle */}
                 <motion.svg
                     className="absolute"
-                    width={500} // Aumentado de 400 para 500
-                    height={500} // Aumentado de 400 para 500
+                    width="clamp(250px, 40vw, 600px)"
+                    height="clamp(250px, 40vw, 600px)"
                     viewBox="0 0 506 506"
                     xmlns="http://www.w3.org/2000/svg"
                     initial={{ scale: 1 }}
@@ -32,12 +31,12 @@ const Photo = () => {
                     <motion.circle
                         cx="253"
                         cy="253"
-                        r="250"
-                        stroke="#0026ffe9"
-                        strokeWidth="8" // Mantido o dobro da espessura
+                        r="230"
+                        stroke="#00f"
+                        strokeWidth="10"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        fill="transparent" // Garante que o fundo dentro do círculo seja transparente
+                        fill="transparent"
                         initial={{ strokeDasharray: "24 10 0 0" }}
                         animate={{
                             strokeDasharray: [
@@ -45,12 +44,12 @@ const Photo = () => {
                                 "16 25 92 72",
                                 "4 250 22 22",
                             ],
-                            rotate: [120, 360],
+                            rotate: [0, 360],
                         }}
                         transition={{
-                            duration: 14,
+                            duration: 10,
                             repeat: Infinity,
-                            repeatType: "reverse",
+                            repeatType: "loop",
                         }}
                     />
                 </motion.svg>
@@ -70,10 +69,10 @@ const Photo = () => {
                         src="/assets/Four-Invert.png"
                         priority
                         quality={100}
-                        width={400} // Aumentado de 300 para 400
-                        height={400} // Aumentado de 300 para 400
+                        width={400}
+                        height={400}
                         alt="Profile Picture"
-                        className="rounded-full object-cover"
+                        className="rounded-full object-cover w-[clamp(150px, 30vw, 450px)] h-[clamp(150px, 30vw, 450px)]"
                     />
                 </motion.div>
             </motion.div>
