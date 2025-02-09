@@ -67,7 +67,12 @@ const Services = () => {
                                     >
                                         {service.num}
                                     </div>
-                                    <Link href={service.href}>
+                                    <Link
+                                        href={service.href}
+                                        className="w-[70px] h-[70px] rounded-full 
+                                    bg-white group-hover:text-blue-600 transition-all duration-200 flex
+                                    justify-center items-center hover:-rotate-45"
+                                    >
                                         <BsArrowDownRight />
                                     </Link>
                                 </div>
