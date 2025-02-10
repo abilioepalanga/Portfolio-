@@ -16,7 +16,8 @@ const services = [
     {
         num: "02",
         title: "Mobile Development",
-        description: "Developing cross-platform mobile applications",
+        description:
+            "Specialized in crafting high-performance, scalable mobile applications tailored, ensuring optimal user experiences. ",
         href: "/mobile-development",
     },
 
@@ -73,11 +74,16 @@ const Services = () => {
                                     bg-white group-hover:text-blue-600 transition-all duration-200 flex
                                     justify-center items-center hover:-rotate-45"
                                     >
-                                        <BsArrowDownRight />
+                                        <BsArrowDownRight className="text-primary text-3xl" />
                                     </Link>
                                 </div>
                                 {/*Title*/}
-                                <h2>{service.title}</h2>
+                                <h2
+                                    className="text-[42px] front-bold leading-none text-white
+                                 group-hover:text-blue-600 transition-all duration-300"
+                                >
+                                    {service.title}
+                                </h2>
                                 {/*Description*/}
                                 <p>{service.description}</p>
                                 {/*Border*/}
