@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 const timelineData = [
     {
         year: "2023 - 2025",
-        title: "Master's Degree-University of Porto",
+        title: "Master's Degree - University of Porto",
         description:
-            "Master's degree in Informatics and Computing Engineering at FEUP, Faculty of Engineering of the University of Porto. Final year (Preparing dissertation) ",
+            "Master's degree in Informatics and Computing Engineering at FEUP, Faculty of Engineering of the University of Porto. Final year (Preparing dissertation)",
         category: "education",
     },
     {
         year: "2018 - 2024",
-        title: "Front-End Developer-Evolium",
+        title: "Front-End Developer - Evolium",
         description:
             "Developed and maintained responsive interfaces for web applications. Collaborated with design teams (UX/UI) to translate wireframes and mockups into functional code, ensuring consistency and accessibility of interfaces.",
         category: "experience",
@@ -22,7 +22,7 @@ const timelineData = [
         year: "2012 - 2018",
         title: "Bachelor's Degree - Katyavala Bwila University",
         description:
-            "Degree in Computer Science from the Higher Polytechnic Institute of Katyavala Bwila UniversityBachelor of Computer Science",
+            "Degree in Computer Science from the Higher Polytechnic Institute of Katyavala Bwila University Bachelor of Computer Science.",
         category: "education",
     },
     {
@@ -34,12 +34,11 @@ const timelineData = [
     },
     {
         year: "2017",
-        title: "CCNA Routing and Switching: Introdução a redes - Cisco Systems, Inc.",
+        title: "CCNA Routing and Switching: Introduction to Networks - Cisco Systems, Inc.",
         description:
-            "He completed the CCNA Routing and Switching course, acquiring fundamental knowledge about computer networks, routing and switching, as well as learning how to configure and manage basic networks.",
+            "Completed the CCNA Routing and Switching course, acquiring fundamental knowledge about computer networks, routing and switching, as well as learning how to configure and manage basic networks.",
         category: "education",
     },
-
     {
         year: "2019 - 2023",
         title: "Professor of Programming and Database - Balombo Polytechnic Institute",
@@ -59,20 +58,21 @@ const MyJourney = () => {
 
                 <div className="relative flex flex-col md:flex-row items-center">
                     {/* Linha Vertical */}
-                    <div className="hidden md:flex absolute left-1/2 top-0 bottom-0 w-1 bg-blue-500"></div>
+                    <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-blue-500"></div>
 
+                    {/* Círculos alinhados */}
                     {timelineData.map((_, index) => (
                         <div
                             key={index}
                             className="absolute left-1/2 transform -translate-x-1/2"
                             style={{
-                                top: `$${
+                                top: `${
                                     (index + 1) *
                                     (100 / (timelineData.length + 1))
                                 }%`,
                             }}
                         >
-                            <div className="w-6 h-6 bg-blue-500 rounded-full shadow-lg"></div>
+                            <div className="w-6 h-6 bg-blue-500 rounded-full shadow-lg border-2 border-white"></div>
                         </div>
                     ))}
 
@@ -94,7 +94,7 @@ const MyJourney = () => {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
-                                className={`relative flex flex-col justify-center p-8 bg-gray-800 rounded-3xl shadow-2xl border border-gray-700 transform transition-all hover:scale-110 hover:shadow-blue-500/50 hover:bg-gray-700 ${
+                                className={`relative flex flex-col justify-center p-8 bg-gray-800 rounded-3xl shadow-2xl border border-gray-700 transform transition-all hover:scale-110 hover:shadow-blue-500/50 hover:bg-gray-700 $ {
                                     item.category === "education"
                                         ? "md:mr-auto"
                                         : "md:ml-auto"
