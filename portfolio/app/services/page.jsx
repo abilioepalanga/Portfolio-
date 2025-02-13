@@ -10,7 +10,7 @@ const services = [
         description:
             "Building fast, responsive, and SEO-friendly websites using modern technologies.",
         details:
-            "We specialize in developing custom web applications, e-commerce platforms, and corporate websites using the latest frameworks such as React, Next.js, and more.",
+            "Specialized in developing custom web applications, e-commerce platforms, and corporate websites using the latest frameworks such as React, Next.js, and more.",
     },
     {
         num: "02",

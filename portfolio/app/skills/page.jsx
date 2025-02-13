@@ -74,8 +74,8 @@ const skills = [
     {
         category: "Backend Basics",
         items: [
-            { name: "Node.js", percent: 50 },
-            { name: "Express.js", percent: 50 },
+            { name: "Node.js", percent: 65 },
+            { name: "Express.js", percent: 60 },
             { name: "NestJS", percent: 38 },
             { name: "PostgreSQL", percent: 51 },
             { name: "MySQL", percent: 53 },
