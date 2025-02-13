@@ -5,38 +5,46 @@ import { motion } from "framer-motion";
 
 const timelineData = [
     {
+        year: "2023 - 2025",
+        title: "Master's Degree-University of Porto",
+        description:
+            "Master's degree in Informatics and Computing Engineering at FEUP, Faculty of Engineering of the University of Porto. Final year (Preparing dissertation) ",
+        category: "education",
+    },
+    {
+        year: "2018 - 2024",
+        title: "Front-End Developer-Evolium",
+        description:
+            "Developed and maintained responsive interfaces for web applications. Collaborated with design teams (UX/UI) to translate wireframes and mockups into functional code, ensuring consistency and accessibility of interfaces.",
+        category: "experience",
+    },
+    {
+        year: "2012 - 2018",
+        title: "Bachelor's Degree - Katyavala Bwila University",
+        description:
+            "Degree in Computer Science from the Higher Polytechnic Institute of Katyavala Bwila UniversityBachelor of Computer Science",
+        category: "education",
+    },
+    {
         year: "2017 - 2018",
-        title: "Master's Degree - University",
+        title: "Frontend Developer - MusicKool",
         description:
-            "Completed coursework in Mechanical Engineering with a focus on automation and computational methods.",
-        category: "education",
-    },
-    {
-        year: "2018 - 2019",
-        title: "Pipe Technician - Saipem",
-        description:
-            "Worked in offshore pipeline coating operations, ensuring quality and process optimization.",
+            "Worked on the development and maintenance of user interfaces for Landing Pages, utilizing technologies such as HTML, CSS, and JavaScript.",
         category: "experience",
     },
     {
-        year: "2019 - 2020",
-        title: "Master's Degree - University",
+        year: "2017",
+        title: "CCNA Routing and Switching: Introdução a redes - Cisco Systems, Inc.",
         description:
-            "Research on automation and PLC programming for mechanical applications.",
+            "He completed the CCNA Routing and Switching course, acquiring fundamental knowledge about computer networks, routing and switching, as well as learning how to configure and manage basic networks.",
         category: "education",
     },
+
     {
-        year: "2020 - 2023",
-        title: "Senior Pipe Technician - Saipem",
+        year: "2019 - 2023",
+        title: "Professor of Programming and Database - Balombo Polytechnic Institute",
         description:
-            "Led technical teams in advanced coating and pipeline integrity projects.",
-        category: "experience",
-    },
-    {
-        year: "2023 - Present",
-        title: "React & Next.js Developer - Freelance",
-        description:
-            "Building web applications with modern frameworks, enhancing UX/UI and performance.",
+            "Taught programming and database subjects, developing and implementing lesson plans, practical activities and assessments, as well as guiding students in database development and management projects and desktop application development.",
         category: "experience",
     },
 ];
