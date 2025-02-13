@@ -95,9 +95,9 @@ const Skills = () => {
                     {skills.map((skillCategory, index) => (
                         <div
                             key={index}
-                            className="bg-gray-800 p-6 rounded-xl shadow-lg"
+                            className="bg-gray-800 p-6 rounded-xl shadow-lg hover:border hover:border-blue-400 hover:ring-2 hover:ring-blue-400 transition duration-300"
                         >
-                            <h2 className="text-2xl font-semibold text-blue-400 mb-4">
+                            <h2 className="text-2xl font-semibold text-white mb-4">
                                 {skillCategory.category}
                             </h2>
                             {skillCategory.items.map((skill, idx) => (
