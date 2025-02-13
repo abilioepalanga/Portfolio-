@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
@@ -8,7 +9,8 @@ const projects = [
         description:
             "A modern portfolio website built with Next.js and Tailwind CSS.",
         technologies: ["Next.js", "React", "Tailwind CSS"],
-        image: "/images/portfolio.jpg",
+        image: "/images/portfolio.jpg", // Carregue a imagem do projeto aqui
+        video: "/videos/portfolio.mp4", // Carregue o vídeo demonstrativo aqui
         link: "#",
     },
     {
@@ -17,6 +19,7 @@ const projects = [
             "A full-stack e-commerce application with Stripe integration.",
         technologies: ["React", "Node.js", "MongoDB"],
         image: "/images/ecommerce.jpg",
+        video: "/videos/ecommerce.mp4",
         link: "#",
     },
     {
@@ -25,6 +28,7 @@ const projects = [
             "A task management web app with drag-and-drop functionality.",
         technologies: ["React", "Firebase", "Redux"],
         image: "/images/taskmanager.jpg",
+        video: "/videos/taskmanager.mp4",
         link: "#",
     },
     {
@@ -33,6 +37,7 @@ const projects = [
             "A web app that generates AI-based images using OpenAI API.",
         technologies: ["Next.js", "OpenAI API", "Tailwind CSS"],
         image: "/images/ai-generator.jpg",
+        video: "/videos/ai-generator.mp4",
         link: "#",
     },
 ];
@@ -49,29 +54,38 @@ const Work = () => {
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            className="bg-gray-800 p-8 rounded-xl shadow-lg hover:border hover:border-blue-400 hover:ring-2 hover:ring-blue-400 transition duration-300"
+                            className="bg-gray-800 p-8 rounded-xl shadow-lg hover:border hover:border-blue-400 hover:ring-2 hover:ring-blue-400 transition duration-300 relative overflow-hidden"
                             whileHover={{ scale: 1.02 }}
                         >
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="w-full h-64 object-cover rounded-lg mb-4"
-                            />
-                            <h2 className="text-3xl font-semibold mb-2">
+                            <div className="relative w-full h-64">
+                                <motion.img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300"
+                                    whileHover={{ opacity: 0 }}
+                                />
+                                <motion.video
+                                    src={project.video}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    className="absolute inset-0 w-full h-full object-cover rounded-lg opacity-0 transition-opacity duration-300"
+                                    whileHover={{ opacity: 1 }}
+                                />
+                            </div>
+                            <h2 className="text-3xl font-semibold mt-4 mb-2">
                                 {project.title}
                             </h2>
                             <p className="text-gray-300 mb-4">
                                 {project.description}
                             </p>
-                            <div className="flex flex-wrap gap-2 mb-4">
-                                {project.technologies.map((tech, idx) => (
-                                    <span
-                                        key={idx}
-                                        className="bg-blue-500 text-white px-3 py-1 rounded text-sm"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
+                            <div className="mb-4">
+                                <strong className="text-blue-400">
+                                    Technologies:
+                                </strong>{" "}
+                                <span className="text-gray-300">
+                                    {project.technologies.join(", ")}
+                                </span>
                             </div>
                             <a
                                 href={project.link}
