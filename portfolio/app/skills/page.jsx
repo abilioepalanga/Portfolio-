@@ -88,34 +88,42 @@ const Skills = () => {
         <section className="min-h-screen py-12 bg-gray-900 text-white">
             <div className="container mx-auto px-6">
                 <h1 className="text-4xl font-bold text-center mb-10">
-                    <span className="text-gray-400">My</span> Skills
+                    <span className="text-white">My</span>{" "}
+                    <span className="text-blue-400">Skills</span>
                 </h1>
-                {skills.map((skillCategory, index) => (
-                    <div key={index} className="mb-8">
-                        <h2 className="text-2xl font-semibold text-blue-400 mb-4">
-                            {skillCategory.category}
-                        </h2>
-                        {skillCategory.items.map((skill, idx) => (
-                            <div key={idx} className="mb-4">
-                                <div className="flex justify-between">
-                                    <span>{skill.name}</span>
-                                    <span>{skill.percent}%</span>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {skills.map((skillCategory, index) => (
+                        <div
+                            key={index}
+                            className="bg-gray-800 p-6 rounded-xl shadow-lg"
+                        >
+                            <h2 className="text-2xl font-semibold text-blue-400 mb-4">
+                                {skillCategory.category}
+                            </h2>
+                            {skillCategory.items.map((skill, idx) => (
+                                <div key={idx} className="mb-4">
+                                    <div className="flex justify-between">
+                                        <span>{skill.name}</span>
+                                        <span>{skill.percent}%</span>
+                                    </div>
+                                    <div className="w-full bg-gray-700 h-2 rounded-full overflow-hidden">
+                                        <motion.div
+                                            className="h-2 bg-blue-500"
+                                            initial={{ width: 0 }}
+                                            animate={{
+                                                width: `${skill.percent}%`,
+                                            }}
+                                            transition={{
+                                                duration: 1.2,
+                                                ease: "easeOut",
+                                            }}
+                                        ></motion.div>
+                                    </div>
                                 </div>
-                                <motion.div
-                                    className="bg-gray-700 h-2 rounded-full overflow-hidden"
-                                    initial={{ width: 0 }}
-                                    animate={{ width: `${skill.percent}%` }}
-                                    transition={{
-                                        duration: 1.2,
-                                        ease: "easeOut",
-                                    }}
-                                >
-                                    <div className="h-2 bg-blue-500"></div>
-                                </motion.div>
-                            </div>
-                        ))}
-                    </div>
-                ))}
+                            ))}
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );
