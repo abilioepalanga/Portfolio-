@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const skills = [
     {
-        category: "Linguagens Fundamentais",
+        category: "Fundamental Languages",
         items: [
             { name: "HTML", percent: 90 },
             { name: "CSS", percent: 84 },
@@ -13,7 +13,7 @@ const skills = [
         ],
     },
     {
-        category: "Frameworks e Bibliotecas",
+        category: "Frameworks and Libraries",
         items: [
             { name: "React.js", percent: 88 },
             { name: "Next.js", percent: 82 },
@@ -22,7 +22,7 @@ const skills = [
         ],
     },
     {
-        category: "Pré-processadores e Estilização Avançada",
+        category: "Preprocessors and Advanced Styling",
         items: [
             { name: "SASS/SCSS/Less", percent: 70 },
             { name: "Tailwind CSS", percent: 75 },
@@ -31,7 +31,7 @@ const skills = [
         ],
     },
     {
-        category: "APIs e Integrações",
+        category: "APIs and Integrations",
         items: [
             { name: "REST APIs", percent: 85 },
             { name: "GraphQL", percent: 70 },
@@ -40,7 +40,7 @@ const skills = [
         ],
     },
     {
-        category: "Testes e Qualidade de Código",
+        category: "Testing and Code Quality",
         items: [
             { name: "Jest", percent: 70 },
             { name: "React Testing Library", percent: 60 },
@@ -48,7 +48,7 @@ const skills = [
         ],
     },
     {
-        category: "Controle de Versão e Colaboração",
+        category: "Version Control and Collaboration",
         items: [
             { name: "Git", percent: 80 },
             { name: "GitHub", percent: 80 },
@@ -63,15 +63,16 @@ const skills = [
         ],
     },
     {
-        category: "Ferramentas de Deploy e Cloud",
+        category: "Deployment and Cloud Tools",
         items: [
-            { name: "Vercel e Netlify", percent: 80 },
+            { name: "Vercel", percent: 80 },
+            { name: "Netlify", percent: 80 },
             { name: "Docker", percent: 40 },
             { name: "AWS", percent: 30 },
         ],
     },
     {
-        category: "Noções de Backend",
+        category: "Backend Basics",
         items: [
             { name: "Node.js", percent: 50 },
             { name: "Express.js", percent: 50 },
