@@ -61,6 +61,8 @@ const Contact = () => {
                         className="p-4 rounded-lg bg-gray-700 text-white"
                         onChange={handleChange}
                         required
+                        aria-required="true"
+                        title="Please fill out this field"
                     />
                     <input
                         type="email"
@@ -69,12 +71,16 @@ const Contact = () => {
                         className="p-4 rounded-lg bg-gray-700 text-white"
                         onChange={handleChange}
                         required
+                        aria-required="true"
+                        title="Please enter a valid email address"
                     />
                     <select
                         name="subject"
                         className="p-4 rounded-lg bg-gray-700 text-white"
                         onChange={handleChange}
                         required
+                        aria-required="true"
+                        title="Please select a service"
                         defaultValue=""
                     >
                         <option value="" disabled>
@@ -96,10 +102,12 @@ const Contact = () => {
                         className="p-4 rounded-lg bg-gray-700 text-white h-32"
                         onChange={handleChange}
                         required
+                        aria-required="true"
+                        title="Please enter a message"
                     ></textarea>
                     <button
                         type="submit"
-                        className="bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 hover:border-gray-700 transition-all border-2 border-transparent"
+                        className="bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 hover:border-blue-400 transition-all border-2 border-transparent"
                     >
                         Send Message
                     </button>
