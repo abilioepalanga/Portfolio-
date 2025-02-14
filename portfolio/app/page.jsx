@@ -7,7 +7,7 @@ import Stats from "@/components/Stats";
 
 const Home = () => {
     return (
-        <section className="h-full">
+        <section className="h-full bg-gray-900">
             <div className="container mx-auto h-full">
                 <div
                     className="flex flex-col xl:flex-row items-center justify-between
@@ -28,7 +28,7 @@ const Home = () => {
                             web applications. With expertise in modern
                             frameworks and a keen eye for design, I turn ideas
                             into seamless digital experiences. Let’s build
-                            something amazing together!"
+                            something amazing together!
                         </p>
                         {/* Button and Socials media*/}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
