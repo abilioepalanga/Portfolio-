@@ -11,7 +11,7 @@ const projects = [
         technologies: ["Next.js", "React", "Tailwind CSS"],
         image: "/images/cakes.png",
         video: "/videos/port-1.mp4",
-        link: "#",
+        link: "https://cakecraze-website.netlify.app/",
     },
     {
         title: "E-commerce Platform",
@@ -88,6 +88,8 @@ const Work = () => {
                                 </div>
                                 <a
                                     href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-xs transition mt-2"
                                 >
                                     View Project <FaExternalLinkAlt />
