@@ -10,7 +10,7 @@ const projects = [
             "A modern portfolio website built with Next.js and Tailwind CSS.",
         technologies: ["Next.js", "React", "Tailwind CSS"],
         image: "/images/cakes.png",
-        video: "/videos/portfolio.mp4",
+        video: "/videos/port-1.mp4",
         link: "#",
     },
     {
@@ -19,7 +19,7 @@ const projects = [
             "A full-stack e-commerce application with Stripe integration.",
         technologies: ["React", "Node.js", "MongoDB"],
         image: "/images/ecommerce.jpg",
-        video: " /videos/ecommerce.mp4",
+        video: "/videos/ecommerce.mp4",
         link: "#",
     },
     {
@@ -54,21 +54,21 @@ const Work = () => {
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            className="bg-gray-800 p-0 rounded-lg shadow-lg transition duration-300 relative overflow-hidden"
+                            className="bg-gray-800 p-0 rounded-lg shadow-lg transition duration-300 relative overflow-hidden border-2 border-transparent hover:border-blue-400"
                             whileHover={{ scale: 1.02 }}
                         >
-                            <div className="relative w-full h-auto max-h-[600px] flex justify-center items-center">
+                            <div className="relative w-full flex justify-center items-center aspect-video">
                                 <motion.img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-auto max-h-[600px] object-contain rounded-lg"
+                                    className="w-full h-full object-cover rounded-lg"
                                 />
                                 <motion.video
                                     src={project.video}
                                     autoPlay
                                     loop
                                     muted
-                                    className="absolute inset-0 w-full h-auto max-h-[600px] object-contain rounded-lg opacity-0 transition-opacity duration-300 hover:opacity-100"
+                                    className="absolute inset-0 w-full h-full object-cover rounded-lg opacity-0 transition-opacity duration-300 hover:opacity-100"
                                 />
                             </div>
                             <div className="p-4 bg-gray-900 rounded-lg mt-2">
