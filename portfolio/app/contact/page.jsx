@@ -26,6 +26,11 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        window.location.href = `mailto:elvisprizley@gmail.com?subject=${encodeURIComponent(
+            formData.subject
+        )}&body=${encodeURIComponent(
+            `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`
+        )}`;
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 3000);
     };
@@ -39,7 +44,7 @@ const Contact = () => {
                 className="max-w-4xl w-full bg-gray-800 p-8 rounded-2xl shadow-lg"
             >
                 <h2 className="text-4xl font-bold text-white text-center mb-6">
-                    Get in Touch
+                    Get in <span className="text-blue-400">Touch</span>
                 </h2>
                 <p className="text-gray-400 text-center mb-8">
                     If you have any questions or want to collaborate, send a
@@ -94,7 +99,7 @@ const Contact = () => {
                     ></textarea>
                     <button
                         type="submit"
-                        className="bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-all"
+                        className="bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 hover:border-gray-700 transition-all border-2 border-transparent"
                     >
                         Send Message
                     </button>
@@ -106,7 +111,7 @@ const Contact = () => {
                 )}
                 <div className="flex justify-center gap-6 mt-8 text-white text-2xl">
                     <a
-                        href="https://linkedin.com"
+                        href="http://www.linkedin.com/in/ab%C3%ADlio-elvis-epalanga-747aa02a5"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-blue-400 transition"
@@ -114,7 +119,7 @@ const Contact = () => {
                         <FaLinkedin />
                     </a>
                     <a
-                        href="https://github.com"
+                        href="https://github.com/abilioepalanga"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-gray-400 transition"
@@ -122,7 +127,7 @@ const Contact = () => {
                         <FaGithub />
                     </a>
                     <a
-                        href="https://wa.me/yourwhatsapp"
+                        href="https://wa.me/244932383476"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-green-400 transition"
@@ -130,7 +135,7 @@ const Contact = () => {
                         <FaWhatsapp />
                     </a>
                     <a
-                        href="https://discord.com/invite/yourdiscord"
+                        href="https://discord.com/users/aee_93"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-purple-400 transition"
@@ -140,14 +145,20 @@ const Contact = () => {
                 </div>
                 <div className="text-gray-400 text-center mt-6">
                     <p>
-                        <FaEnvelope className="inline mr-2" />{" "}
-                        your-email@example.com
+                        <a
+                            href="mailto:elvisprizley@gmail.com"
+                            className="hover:text-white transition"
+                        >
+                            <FaEnvelope className="inline mr-2" />{" "}
+                            elvisprizley@gmail.com
+                        </a>
                     </p>
                     <p>
-                        <FaPhone className="inline mr-2" /> +1 (123) 456-7890
+                        <FaPhone className="inline mr-2" /> +351 932 093 021
                     </p>
                     <p>
-                        <FaMapMarkerAlt className="inline mr-2" /> New York, USA
+                        <FaMapMarkerAlt className="inline mr-2" /> Porto,
+                        Portugal
                     </p>
                 </div>
             </motion.div>
