@@ -5,10 +5,10 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
     {
-        title: "Portfolio Website",
+        title: "Cake Website",
         description:
-            "A modern portfolio website built with Next.js and Tailwind CSS.",
-        technologies: ["Next.js", "React", "Tailwind CSS"],
+            "A modern Cake website built. The website is fully responsive as well.",
+        technologies: ["Html", "JavaScript", "Tailwind CSS"],
         image: "/images/cakes.png",
         video: "/videos/port-1.mp4",
         link: "https://cakecraze-website.netlify.app/",
